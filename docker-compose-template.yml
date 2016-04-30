@@ -1,0 +1,16 @@
+version: '2'
+services:
+  router:
+      build: ./router
+  service1:
+      build: ./service1
+      environment:
+      - RAILS_ENV=production
+      - RACK_ENV=production
+      - branch=service_example_1
+  service2:
+      build: ./service2
+      environment:
+      - RAILS_ENV=production
+      - RACK_ENV=production
+      - branch=service_example_2
